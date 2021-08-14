@@ -2,11 +2,14 @@
 
 import discord
 import os
+from stayin_alive import stayin_alive
 
+stayin_alive()
 
 TOKEN = os.environ['DISCORD_BOT_SECRET']
 
 client = discord.Client()
+
 
 @client.event
 async def on_ready():
@@ -21,7 +24,6 @@ async def on_message(message):
     await message.channel.send('uwu')
   if 'owo' in message.content:
     await message.channel.send('owo')
-
 
 
 client.run(TOKEN)
