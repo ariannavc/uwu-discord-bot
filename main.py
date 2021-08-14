@@ -20,9 +20,9 @@ async def on_ready():
 async def on_message(message):
   if message.author == client.user:
     return
-  if 'uwu' in message.content:
+  if 'uwu' in message.content.lower():
     await message.channel.send('uwu')
-  if 'owo' in message.content:
+  if 'owo' in message.content.lower():
     await message.channel.send('owo')
 
 
