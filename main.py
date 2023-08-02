@@ -8,7 +8,8 @@ stayin_alive()
 
 TOKEN = os.environ['DISCORD_BOT_SECRET']
 
-client = discord.Client()
+intents = discord.Intents(message_content=True, messages=True, typing=True)
+client = discord.Client(intents=intents)
 
 greetings = [
     "hi", "hii", "hiii", "hello", "hey", "helloo", "hellooo", "g morining",
